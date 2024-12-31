@@ -14,3 +14,7 @@ def record_audio():
         audio = recognizer.listen(source)
     return audio
 
+if __name__ == '__main__':
+    audio = record_audio()
+    with open('test_audio.wav', 'wb') as ad:
+        ad.write(audio.get_wav_data())
